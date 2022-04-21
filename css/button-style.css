@@ -1,0 +1,47 @@
+button {
+	border-radius: 8px;
+	color: white;
+	border: none;
+	word-wrap:break-word;
+}
+
+.dropbtn {
+	background-color: #FC4848;
+	padding: 12px;
+	width: 120px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	background-color: #F56F6F ;
+}
+
+.functionButton {
+	padding: 15px;
+	width: 135px;
+}
+
+.grp_btn {
+	vertical-align:middle;
+	height: 64px;
+	width: 120px;
+}
+
+.grass {
+	background-color: #3dd28d;
+}
+
+.grass:hover {
+	background-color: #3e8e41;
+}
+
+.sun {
+	background-color: #89c403;
+}
+
+.sun:hover {
+	background-color: #78AB03;
+}
+
+.employee {
+	padding: 8px;
+}
