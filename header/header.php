@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require(__DIR__ ."./headerPath.php");
+require_once("/headerPath.php");
 ?>
 
 <html>
