@@ -1,0 +1,14 @@
+span#logout {
+    display: block;
+    float: right;
+    height: 0px;
+}
+
+header {
+    padding: 15px;
+    color: white;
+    background: #F92424;
+    font-weight: bold;
+    text-align: left;
+    font-size: 16px;
+}

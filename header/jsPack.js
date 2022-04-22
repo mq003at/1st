@@ -1,7 +1,6 @@
 // Dynamically loading dependancies
 let resources = document.getElementById("loader").getAttribute("resources");
 let resourcesArr = resources.split(";");
-// console.log(resourcesArr);
 
 let listJS = {
   // JS Resources List
@@ -23,12 +22,31 @@ let listJS = {
   jQuery: {
     url: "./js/jquery-3.2.1.js",
     type: "text/javascript",
-    location: "body",
+    location: "head",
   },
   bootStrap: {
     url: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
     type: "text/javascript",
     location: "head",
+  },
+
+  // External JS files
+  management: {
+    url: "../js/management.js",
+    type: "text/javascript",
+    location: "body",
+  },
+
+  dateStamp: {
+    url: "../js/dateStamp.js",
+    type: "text/javascript",
+    location: "body",
+  },
+
+  pinPage: {
+    url: "../js/pinPage.js",
+    type: "text/javascript",
+    location: "body",
   },
 };
 
@@ -38,7 +56,9 @@ resourcesArr.forEach((resourcesName) => {
   script.src = resource.url;
   script.async = false;
   script.type = resource.type;
-  script.onload = console.log(resource.url);
-  if (resource.location == "head") document.head.apend(script);
+  if (resource.location == "head") {document.head.append(script)}
   else document.body.append(script);
+  console.log(listJS[resourcesName])
 });
+
+

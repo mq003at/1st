@@ -1,22 +1,30 @@
-var pinAccess;
-$(window).on("load", function() {
-	$.post("getPin.php", {}, function(data) {
-		pinAccess = data;
-	} );
+let shopKey = $("#pinSubmit").val();
+let shopPin;
+let typedPin;
+
+$(window).on("load", function () {
+    var ref = firebase.database().ref();
+    ref
+      .child("shop_data").child(shopKey)
+      .once("value")
+      .then((snap) => {
+        var val = snap.val();
+        shopPin = val.pin;
+      });
 });
-	
-var typed_pin;
-$("#pinInput").on("change keyup paste", function() {
-	var value = $(this).val();
-	if(value == pinAccess) {
-		$(this).val('');
-		$(window.parent.document).find("#logout_la").html("<label class='header'>KIRJAUDU ULOS</label>");
-		parent.get_user();
-		typed_pin = value;
-		$("#optionArea").css("display", "inline");
-		$("#pinArea").css("display", "none");
-		$.post("setSession.php", {"typed_pin": typed_pin });
-	}
+
+$("#pinSubmit").click(() => {
+  typedPin = $("#pinInput").val();
+  if (typedPin == shopPin) {
+    $(window.parent.document)
+      .find("#logout_la")
+      .html("<label class='header'>KIRJAUDU ULOS</label>");
+    $("#optionArea").css("display", "inline");
+    $("#pinArea").css("display", "none");
+    $.post("session.php", {"typed_pin": typedPin });
+  } else {
+    alert("Incorrect Pin");
+  }
 });
 
 $("#employeeLabel").click(function() {
@@ -55,9 +63,6 @@ $("#deleteLogs").click(function() {
 $("#cleanupConfirm").click(function() {
 	cleanupLogs();
 });
-
-
-
 
 function cleanupLogs() {
 	var falseIn = [];
@@ -128,4 +133,3 @@ function getInEmp() {
 function offModal() {
 	document.getElementById("ntfModalDismiss").click();
 }
-

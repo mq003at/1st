@@ -1,0 +1,23 @@
+iframe {
+    border: 0;
+}
+
+iframe#right_div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(249, 36, 36, 0.8);
+    text-align: center;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+iframe {
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+    transition: All 0.3s ease;
+}
