@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php
-require_once("./headerPath.php");
 ?>
 
 <html>
