@@ -32,19 +32,19 @@ let listJS = {
 
   // External JS files
   management: {
-    url: "../js/management.js",
+    url: "./js/management.js",
     type: "text/javascript",
     location: "body",
   },
 
   dateStamp: {
-    url: "../js/dateStamp.js",
+    url: "./js/dateStamp.js",
     type: "text/javascript",
     location: "body",
   },
 
   pinPage: {
-    url: "../js/pinPage.js",
+    url: "./js/pinPage.js",
     type: "text/javascript",
     location: "body",
   },

@@ -16,7 +16,6 @@ if (isset($_SESSION['typed_pin']) && $_SESSION['typed_pin'] == $_SESSION['pin'])
     </script><?php
             }
                 ?>
-
 <html>
 
 <head>
@@ -31,9 +30,6 @@ if (isset($_SESSION['typed_pin']) && $_SESSION['typed_pin'] == $_SESSION['pin'])
 
     <iframe id='left_div' frameborder="0" style="position:absolute;top:51px;left:0;width:75%;height:93%;" src='pinPage.php'></iframe>
     </iframe>
-
-    
-
 </body>
 
 </html>

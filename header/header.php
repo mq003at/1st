@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <?php
-require_once("headerPath.php");
+require(__DIR__ ."./headerPath.php");
 ?>
 
 <html>
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="<?php echo $css; ?>">
     <link rel="stylesheet" href="<?php echo $font; ?>">
-    <link rel="stylesheet" href="../css/header.css">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="./js/jquery-3.2.1.js"></script>
 </head>
 
 <body>
@@ -23,7 +23,7 @@ require_once("headerPath.php");
                 });
             });
             $("#pinpage").click(function() {
-                $("#left_div").attr('src', "pinPage.php");
+                $("#left_div").attr('src', "./pinPage.php");
             });
             $("#homepage").click(function() {
                 window.open("../index.php", "_top");

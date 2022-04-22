@@ -2,34 +2,36 @@
 @ob_start();
 session_start();
 
-$logo_img = '/img/logo_1.png';
-require_once("logo.php");
-
-if (isset($_SESSION['typed_pin']) && $_SESSION['typed_pin'] == $_SESSION['pin']) {
-    $pinAreaDisplay = "none";
-    $optionAreaDisplay = "inline-block";
-?><script>
-        window.open("management.php", "_top");
-    </script><?php
-            } else {
-                ?><script>
-        $(window.parent.document).find("#logout_la").html("");
-    </script><?php
-            }
-
-                ?>
+$logo_img = './img/logo_1.png';
+require_once("./logo.php");
+require_once("./header/header.php");
+?>
 
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>SPR Management</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="<?php echo $button_css; ?>">
 </head>
 
 <body>
+    <?php
+    if (isset($_SESSION['typed_pin']) && $_SESSION['typed_pin'] == $_SESSION['pin']) {
+        $pinAreaDisplay = "none";
+        $optionAreaDisplay = "inline-block";
+    ?><script>
+            window.open("management.php", "_top");
+        </script><?php
+                } else {
+                    ?><script>
+            $(window.parent.document).find("#logout_la").html("");
+        </script><?php
+                } ?>
+
     <h2>Myymälä</h2>
     <div>
         <table id="place_option" align="center" style="table-layout:fixed" class="radioButtons collapseBorder"></table>
@@ -63,7 +65,7 @@ if (isset($_SESSION['typed_pin']) && $_SESSION['typed_pin'] == $_SESSION['pin'])
                             "shop_id": arr[0],
                             'shop_name': shop_name
                         }, (data) => {
-                            window.open("management.php", "_top");
+                            window.open("./management.php", "_top");
                             parent.window.$('#right_div').find('#shop_name').html(shop_name);
                         })
                     })
@@ -75,7 +77,7 @@ if (isset($_SESSION['typed_pin']) && $_SESSION['typed_pin'] == $_SESSION['pin'])
         }
     </script>
 
-    <script id="loader" src="./header/jsPack.js" resources="firebasejs;firebaseInit;firebaseRef;jQuery"></script>
+    <script id="loader" src="./header/jsPack.js" resources="firebasejs;firebaseInit;firebaseRef"></script>
 </body>
 
 </html>
