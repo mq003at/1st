@@ -3,7 +3,7 @@
 session_start();
 
 $logo_img = '/img/logo_1.png';
-require_once("/logo.php");
+require_once("/php/logo.php");
 require_once("/header/header.php");
 ?>
 
