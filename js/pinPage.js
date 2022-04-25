@@ -13,18 +13,12 @@ $(window).on("load", function () {
       });
 });
 
+$("#pinInput").keyup((e) => {
+	if (e.keyCode == 13) submitPin();
+})
+
 $("#pinSubmit").click(() => {
-  typedPin = $("#pinInput").val();
-  if (typedPin == shopPin) {
-    $(window.parent.document)
-      .find("#logout_la")
-      .html("<label class='header'>KIRJAUDU ULOS</label>");
-    $("#optionArea").css("display", "inline");
-    $("#pinArea").css("display", "none");
-    $.post("session.php", {"typed_pin": typedPin });
-  } else {
-    alert("Incorrect Pin");
-  }
+	submitPin();
 });
 
 $("#employeeLabel").click(function() {
@@ -63,6 +57,20 @@ $("#deleteLogs").click(function() {
 $("#cleanupConfirm").click(function() {
 	cleanupLogs();
 });
+
+function submitPin(){
+	typedPin = $("#pinInput").val();
+	if (typedPin == shopPin) {
+	  $(window.parent.document)
+		.find("#logout_la")
+		.html("<label class='header'>KIRJAUDU ULOS</label>");
+	  $("#optionArea").css("display", "inline");
+	  $("#pinArea").css("display", "none");
+	  $.post("session.php", {"typed_pin": typedPin });
+	} else {
+	  alert("Incorrect Pin");
+	}
+}
 
 function cleanupLogs() {
 	var falseIn = [];

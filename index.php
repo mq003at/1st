@@ -2,9 +2,8 @@
 @ob_start();
 session_start();
 
-$logo_img = '/img/logo_1.png';
-require_once $_SERVER['DOCUMENT_ROOT']."/php/logo.php";
 require_once $_SERVER['DOCUMENT_ROOT']."/header/header.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/header/footer.php"
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +13,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/header/header.php";
     <title>SPR Management</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/index.css">
-    <script src="./js/jquery-3.2.1.js"></script>
+    <script src="/js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="<?php echo $button_css; ?>">
 </head>
 

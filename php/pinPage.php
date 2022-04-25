@@ -1,12 +1,8 @@
 <?php
 session_start();
-require_once $_SERVER['DOCUMENT_ROOT'].'/header/headerPath.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/header/headerPath.php';
 ?>
 <!DOCTYPE html>
-<script>
-    var shop_id = '<?php echo $_SESSION['shop_id']; ?>';
-    <?php echo "" ?>
-</script>
 <html>
 
 <head>
@@ -20,6 +16,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/header/headerPath.php';
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <body>
+    <script>
+        var shop_id = '<?php echo $_SESSION['shop_id']; ?>';
+    </script>
     <!-- Logout Header Editor -->
     <?php
     $pinAreaDisplay = "inline";
@@ -42,7 +41,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/header/headerPath.php';
                         ?>
 
     <!-- Form uploader -->
-    <form enctype="multipart/form-data" action="upload.php" method="post">
+    <form enctype="multipart/form-data" action="/php/upload.php" method="post">
         <label for="file">Valitse raportti velhoon:</label><br />
         <input name="file" type="file" id="file"><br /><br />Lataa velhoon<br />
         <script>

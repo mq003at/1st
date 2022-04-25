@@ -1,8 +1,22 @@
-$(window.parent.document).find("#left_header").html("").append(" >> <label id='pinpage' class='header'>TYÖAJANSEURANTA</label>");
+$(window.parent.document).find("#left_header").html("").append(" >> <label id=\"pinpage\" class=\"header\">TYÖAJANSEURANTA</label>");
 $(window.parent.document).find("#pinpage").click(() => {
-    $("#left_div").attr('src', 'pinPage.php');
+    $("#left_div").attr('src', '/php/pinPage.php');
     $("#left_div").fadeIn()
 })
+
+$('#shrink').click(function() {
+    if($('#right_div').is(':visible')) {
+        rightIframe_hide();
+    } else {
+        $('#left_div').css('width', '75%');
+        $('#right_div').show();
+    }
+});			
+
+function rightIframe_hide() {
+    window.parent.$('#left_div').css('width', '100%');
+    window.parent.$('#right_div').hide();
+}
 
 function get_user() {
     $("#right_div").contents().find("#log_user").html('');

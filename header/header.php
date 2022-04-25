@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<?php
-?>
+<?php require_once $_SERVER['DOCUMENT_ROOT']."/header/headerPath.php"; ?>
 
 <html>
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="<?php echo $css; ?>">
     <link rel="stylesheet" href="<?php echo $font; ?>">
 
@@ -17,15 +16,15 @@
     <script>
         $(document).ready(function() {
             $("#logout_la").click(function() {
-                $.post("./php/logout.php", {}, function() {
-                    window.open("./index.php", "_top");
+                $.post("/php/logout.php", {}, function() {
+                    window.open("/index.php", "_top");
                 });
             });
             $("#pinpage").click(function() {
-                $("#left_div").attr('src', "./php/pinPage.php");
+                $("#left_div").attr('src', "/php/pinPage.php");
             });
             $("#homepage").click(function() {
-                window.open("./index.php", "_top");
+                window.open("/index.php", "_top");
                 $("#logout_la").click();
             });
         });
