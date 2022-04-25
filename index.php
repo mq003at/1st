@@ -3,8 +3,8 @@
 session_start();
 
 $logo_img = '/img/logo_1.png';
-require_once("/php/logo.php");
-require_once("/header/header.php");
+require_once $_SERVER['DOCUMENT_ROOT']."/php/logo.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/header/header.php";
 ?>
 
 <!DOCTYPE html>
