@@ -65,7 +65,7 @@ require_once $_SERVER['DOCUMENT_ROOT']."/header/header.php";
                             "shop_id": arr[0],
                             'shop_name': shop_name
                         }, (data) => {
-                            window.open("/php/management.php", "_top");
+                            window.open("/management.php", "_top");
                             parent.window.$('#right_div').find('#shop_name').html(shop_name);
                         })
                     })
