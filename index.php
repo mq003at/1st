@@ -2,9 +2,9 @@
 @ob_start();
 session_start();
 
-$logo_img = './img/logo_1.png';
-require_once("./logo.php");
-require_once("./header/header.php");
+$logo_img = '/img/logo_1.png';
+require_once("/logo.php");
+require_once("/header/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,8 +12,8 @@ require_once("./header/header.php");
 
 <head>
     <title>SPR Management</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/index.css">
     <script src="./js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="<?php echo $button_css; ?>">
 </head>
@@ -24,7 +24,7 @@ require_once("./header/header.php");
         $pinAreaDisplay = "none";
         $optionAreaDisplay = "inline-block";
     ?><script>
-            window.open("management.php", "_top");
+            window.open("/php/management.php", "_top");
         </script><?php
                 } else {
                     ?><script>
@@ -61,11 +61,11 @@ require_once("./header/header.php");
                         console.log(arr)
 
                         var shop_name = $('#' + arr[0]).text();
-                        $.post("session.php", {
+                        $.post("/php/session.php", {
                             "shop_id": arr[0],
                             'shop_name': shop_name
                         }, (data) => {
-                            window.open("./management.php", "_top");
+                            window.open("/php/management.php", "_top");
                             parent.window.$('#right_div').find('#shop_name').html(shop_name);
                         })
                     })
@@ -77,7 +77,7 @@ require_once("./header/header.php");
         }
     </script>
 
-    <script id="loader" src="./header/jsPack.js" resources="firebasejs;firebaseInit;firebaseRef"></script>
+    <script id="loader" src="/header/jsPack.js" resources="firebasejs;firebaseInit;firebaseRef"></script>
 </body>
 
 </html>

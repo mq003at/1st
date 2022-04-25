@@ -17,15 +17,15 @@
     <script>
         $(document).ready(function() {
             $("#logout_la").click(function() {
-                $.post("logout.php", {}, function() {
-                    window.open("../index.php", "_top");
+                $.post("./php/logout.php", {}, function() {
+                    window.open("./index.php", "_top");
                 });
             });
             $("#pinpage").click(function() {
-                $("#left_div").attr('src', "./pinPage.php");
+                $("#left_div").attr('src', "./php/pinPage.php");
             });
             $("#homepage").click(function() {
-                window.open("../index.php", "_top");
+                window.open("./index.php", "_top");
                 $("#logout_la").click();
             });
         });
