@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('./header/headerPath.php');
+require_once $_SERVER['DOCUMENT_ROOT'].'./header/headerPath.php';
 ?>
 <!DOCTYPE html>
 <script>

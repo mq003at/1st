@@ -2,7 +2,7 @@
 <script>
     var shop_id = '<?php echo $_SESSION['shop_id']; ?>';
 </script>
-<?php require_once('./header/header.php'); ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT']."./header/header.php"; ?>
 
 <?php
 if (!isset($_SESSION['shop_id'])) {
