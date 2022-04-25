@@ -6,7 +6,7 @@
 
 <?php
 if (!isset($_SESSION['shop_id'])) {
-    echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+    header("Location: /index.php");;
 }
 
 if (isset($_SESSION['typed_pin']) && $_SESSION['typed_pin'] == $_SESSION['pin']) {

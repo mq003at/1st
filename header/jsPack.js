@@ -10,17 +10,17 @@ let listJS = {
     location: "body",
   },
   firebaseInit: {
-    url: "./js/firebase_init.js",
+    url: "/js/firebase_init.js",
     type: "text/javascript",
     location: "body",
   },
   firebaseRef: {
-    url: "./js/firebase_ref.js",
+    url: "/js/firebase_ref.js",
     type: "text/javascript",
     location: "body",
   },
   jQuery: {
-    url: "./js/jquery-3.2.1.js",
+    url: "/js/jquery-3.2.1.js",
     type: "text/javascript",
     location: "head",
   },
@@ -32,19 +32,19 @@ let listJS = {
 
   // External JS files
   management: {
-    url: "./js/management.js",
+    url: "/js/management.js",
     type: "text/javascript",
     location: "body",
   },
 
   dateStamp: {
-    url: "./js/dateStamp.js",
+    url: "/js/dateStamp.js",
     type: "text/javascript",
     location: "body",
   },
 
   pinPage: {
-    url: "./js/pinPage.js",
+    url: "/js/pinPage.js",
     type: "text/javascript",
     location: "body",
   },
