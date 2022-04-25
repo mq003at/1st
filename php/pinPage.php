@@ -5,6 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/header/headerPath.php';
 <!DOCTYPE html>
 <script>
     var shop_id = '<?php echo $_SESSION['shop_id']; ?>';
+    <?php echo "" ?>
 </script>
 <html>
 
