@@ -42,6 +42,13 @@ button {
 	background-color: #78AB03;
 }
 
+.moon {
+	background-color: #c92f2f;
+}
+.moon:hover{
+	background-color: #be0026;
+}
+
 .employee {
 	padding: 8px;
 }

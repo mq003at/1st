@@ -7,6 +7,8 @@
     }
 </style>
 
+<script src="/js/jquery-3.2.1.js"></script>
+
 <script>
     $(window).on("load", () => {
         let $footer = $("<span id=\"footer\"></span>");

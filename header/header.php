@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<?php echo $css; ?>">
     <link rel="stylesheet" href="<?php echo $font; ?>">
 
-    <script src="./js/jquery-3.2.1.js"></script>
+    <script src="/js/jquery-3.2.1.js"></script>
 </head>
 
 <body>

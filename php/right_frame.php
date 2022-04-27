@@ -34,6 +34,8 @@ require_once $_SERVER['DOCUMENT_ROOT']."/header/footer.php"
 				getSecond();
 				logOutEmployee(key);
 			}
+
+			function in() {}
 		</script>
         <script id="loader" src="/header/jsPack.js" resources="firebasejs;firebaseInit;firebaseRef;dateStamp"></script>
 	</body>

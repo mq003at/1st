@@ -58,7 +58,7 @@ resourcesArr.forEach((resourcesName) => {
   script.type = resource.type;
   if (resource.location == "head") {document.head.append(script)}
   else document.body.append(script);
-  console.log(listJS[resourcesName])
+  // console.log(listJS[resourcesName])
 });
 
 
